@@ -24,7 +24,7 @@ def upload_utterance(id, message_text):
     # chat 필드에 추가할 새 메시지 데이터를 정의합니다.
     message = {
         'response': message_text,
-        'date': current_korea_time
+        'chat_time': current_korea_time
     }
 
     # 문서 참조를 가져옵니다.
@@ -46,4 +46,6 @@ def upload_utterance(id, message_text):
             'update_at': current_korea_time
         }, merge=True)
 
-    print('채팅 메시지가 성공적으로 추가되었습니다.')
+    print(f'{id} : 채팅 메시지가 성공적으로 추가되었습니다.')
+
+    return
